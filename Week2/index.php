@@ -9,6 +9,7 @@
 <?php
 include("Classes/newClass.php");        // Imports newClass class
 include("Classes/User.php");            // Imports User class
+include("Classes/ChildClass.php");      // Imports ChildClass
 
 // first instance
 $newObject = new NewClass();            // New Instance of NewClass created
@@ -39,6 +40,8 @@ echo "<p> Username: " . $user->get_username() . "</p>";
 echo "<p> Password: " . $user->get_password() . "</p>";
 echo "<p> Email   : " . $user->get_email()    . "</p>";
 
+$childClass = new ChildClass();
+echo "<p>" . $childClass->getParentProp() . "</p>";
 ?>
 </body>
 </html>
